@@ -27,14 +27,14 @@ ln -sf ${BASEDIR}/.Xresources ~/.Xresources
 
 
 # firefox
+mkdir -p ~/.mozilla/firefox/!(*.default)/chrome
+ln -sf ${BASEDIR}/firefox/userChrome.css ~/.mozilla/firefox/*.default/chrome/userChrome.css
 
 # suckless
 if [ -d ${BASEDIR}/projects/void-packages ]
 then
     cp dwm/config.h ~/projects/void-packages/srcpkgs/dwm/files/config.h
     cp st/config.h ~/projects/void-packages/srcpkgs/st/files/config.h
-else
-    echo "set ICFG_SUCKLESS=false" >> ${BASEDIR}/.bash_profile
 fi
 
 # vim
