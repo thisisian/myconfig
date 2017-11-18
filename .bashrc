@@ -39,6 +39,16 @@ note () {
     fi
 }
 
+# cd into first arg and ls -A
+cdl () {
+    if [ -z "$1" ] ; then
+        printf "Missing operand"
+    else
+        cd "$1"
+        ls -A
+    fi
+}
+
 # mkdir and cd into first arg
 mkcd () {
     if [ -z "$1" ] ; then
@@ -77,6 +87,7 @@ alias cdd='cd ~/projects/dotfiles'
 alias cds='cd ~/school'
 alias cdc='cd ~/projects/a_book_on_c'
 alias cdp='cd ~/projects'
+alias cdf='cd ~/school/foundation/final'
 alias edd='vim ~/projects/void-packages/srcpkgs/dwm/files/config.h'
 alias edb='vim ~/.bashrc'
 alias edt='vim ~/.tmux.conf'
