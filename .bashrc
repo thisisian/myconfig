@@ -87,7 +87,7 @@ alias cdd='cd ~/projects/dotfiles'
 alias cds='cd ~/school'
 alias cdc='cd ~/projects/a_book_on_c'
 alias cdp='cd ~/projects'
-alias cdf='cd ~/school/foundation/final'
+alias cdf='cd ~/projects/foundations_final'
 alias edd='vim ~/projects/void-packages/srcpkgs/dwm/files/config.h'
 alias edb='vim ~/.bashrc'
 alias edt='vim ~/.tmux.conf'
@@ -97,7 +97,6 @@ alias bs='bldin st'
 alias nethack='ssh nethack@alt.org'
 alias ta='tmux attach'
 alias termbin="nc termbin.com 9999"
-alias gcc-pedantic="gcc -c -std=c99 -Wpedantic"
 
 ## School-related ##
 alias sshpsu='ssh iwinter@linux.cs.pdx.edu'
