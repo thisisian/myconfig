@@ -81,7 +81,6 @@ bldin () {
 PS1='[\u@\h \W]\$ '
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
-alias la='ls -A --color=auto'
 alias cdv='cd ~/projects/void-packages'
 alias cdd='cd ~/projects/dotfiles'
 alias cds='cd ~/school'
