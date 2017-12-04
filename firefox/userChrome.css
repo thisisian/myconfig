@@ -272,3 +272,9 @@ toolbarbutton#new-tab-button {
     font-size: 10pt !important;
     font-family: sans-serif !important;
 }
+
+/* Action buttons */
+
+#page-action-buttons {
+    display: none !important;
+}

@@ -97,6 +97,7 @@ alias bs='bldin st'
 alias nethack='ssh nethack@alt.org'
 alias ta='tmux attach'
 alias termbin="nc termbin.com 9999"
+alias git_update="git add -A && git commit -am. && git push"
 
 ## School-related ##
 alias sshpsu='ssh iwinter@linux.cs.pdx.edu'
