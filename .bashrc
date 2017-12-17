@@ -45,7 +45,7 @@ cdl () {
         printf "Missing operand"
     else
         cd "$1"
-        ls -A
+        ls -A --color=auto
     fi
 }
 
