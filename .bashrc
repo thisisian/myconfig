@@ -39,16 +39,6 @@ note () {
     fi
 }
 
-# cd into first arg and ls -A
-cdl () {
-    if [ -z "$1" ] ; then
-        printf "Missing operand"
-    else
-        cd "$1"
-        ls -A --color=auto
-    fi
-}
-
 # mkdir and cd into first arg
 mkcd () {
     if [ -z "$1" ] ; then
@@ -82,15 +72,16 @@ PS1='[\u@\h \W]\$ '
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -A --color=auto'
-alias cdk='cdl ~/projects/kr'
-alias cdv='cdl ~/projects/void-packages'
-alias cdd='cdl ~/projects/dotfiles'
-alias cds='cdl ~/school'
-alias cdp='cdl ~/projects'
+alias cdk='cd ~/projects/kr && ls -A'
+alias cdv='cd ~/projects/void-packages && ls -A'
+alias cdd='cd ~/projects/dotfiles && ls -A'
+alias cds='cd ~/school && ls -A'
+alias cdp='cd ~/projects && ls -A'
+alias cdt='cd ~/temp && ls -A'
 alias edd='vim ~/projects/void-packages/srcpkgs/dwm/files/config.h'
 alias edb='vim ~/.bashrc'
-alias edt='vim ~/.tmux.conf'
-alias edv='vim ~/.vimrc'
+alias edtmux='vim ~/.tmux.conf'
+alias edvim='vim ~/.vimrc'
 alias bd='bldin dwm'
 alias bs='bldin st'
 alias nethack='ssh nethack@alt.org'
@@ -98,6 +89,7 @@ alias ta='tmux attach'
 alias termbin="nc termbin.com 9999"
 alias git-push-dotfiles="cd ~/projects/dotfiles && git add -A && git commit -am. && git push && cd -"
 alias git-pull-dotfiles="cd ~/projects/dotfiles && git pull && cd -"
+alias git-push='git add -A && git commit -am. && git push'
 
 ## School-related ##
 alias sshpsu='ssh iwinter@linux.cs.pdx.edu'
