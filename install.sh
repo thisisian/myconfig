@@ -26,9 +26,9 @@ ln -sf ${BASEDIR}/.Xmodmap ~/.Xmodmap
 ln -sf ${BASEDIR}/.Xresources ~/.Xresources
 
 
-# firefox
-mkdir -p ~/.mozilla/firefox/!(*.default)/chrome
-ln -sf ${BASEDIR}/firefox/userChrome.css ~/.mozilla/firefox/*.default/chrome/userChrome.css
+# firefox - fix this
+# mkdir -p ~/.mozilla/firefox/!(*.default)/chrome
+# ln -sf ${BASEDIR}/firefox/userChrome.css ~/.mozilla/firefox/*.default/chrome/userChrome.css
 
 # suckless
 if [ -d ${BASEDIR}/projects/void-packages ]
