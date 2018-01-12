@@ -6,6 +6,8 @@
 [[ $- != *i* ]] && return
 
 set -o vi
+# Bind ctrl-l to clear screen
+bind -m vi-insert "\C-l":clear-screen
 shopt -s extglob
 HISTSIZE=5000
 HISTFILESIZE=10000
@@ -14,29 +16,6 @@ shopt -s histappend
 # calculator
 calc() {
     echo "scale=8;$@" | bc -l
-}
-
-# note taker
-
-note () {
-    # if file doesn't exist, create it
-    if [[ ! -f $HOME/.notes ]]; then
-        touch "$HOME/.notes"
-    fi
-
-    if ! (($#)); then
-        # no arguments, print file
-        cat "$HOME/.notes"
-    elif [[ "$1" == "-c" ]]; then
-        # clear file
-        printf "%s" > "$HOME/.notes"
-    elif [[ "$1" == "-e" ]]; then
-        # edit
-        $EDITOR "$HOME/.notes"
-    else
-        # add all arguments to file
-        printf "%s\n" "$*" >> "$HOME/.notes"
-    fi
 }
 
 # mkdir and cd into first arg
