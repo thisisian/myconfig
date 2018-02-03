@@ -46,8 +46,7 @@ bldin () {
 }
 
 ### aliases ###
-
-PS1='[\u@\h \W]\$ '
+PS1='\e[1m[\u@\h \W]\$\e(B\e[m '
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -A --color=auto'
