@@ -68,6 +68,3 @@ alias termbin="nc termbin.com 9999"
 alias git-push-dotfiles="cd ~/projects/dotfiles && git add -A && git commit -am. && git push && cd -"
 alias git-pull-dotfiles="cd ~/projects/dotfiles && git pull && cd -"
 alias git-push='git add -A && git commit -am. && git push'
-
-## School-related ##
-alias sshpsu='ssh iwinter@linux.cs.pdx.edu'
