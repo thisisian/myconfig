@@ -28,15 +28,6 @@ mkcd () {
     fi
 }
 
-# compile and run <file.c> with options after -o
-gccc () {
-    if [ -z "$1" ] ; then
-        printf "Usage: gccc <inputcode.c> <outputfile>"
-    else 
-        gcc "$1" -o "${1%%.*}" && ./"${1%%.*}"
-    fi
-}
-
 bldin () {
     cd ~/projects/void-packages
     ./xbps-src clean $* &&
@@ -68,3 +59,6 @@ alias termbin="nc termbin.com 9999"
 alias git-push-dotfiles="cd ~/projects/dotfiles && git add -A && git commit -am. && git push && cd -"
 alias git-pull-dotfiles="cd ~/projects/dotfiles && git pull && cd -"
 alias git-push='git add -A && git commit -am. && git push'
+
+# Get private aliases
+[[ -f $HOME/.config/priv_aliases ]] && . $HOME/.config/priv_aliases
