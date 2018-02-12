@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Get private aliases
+[[ -f $HOME/.config/priv_aliases ]] && . $HOME/.config/priv_aliases
+
 set -o vi
 # Bind ctrl-l to clear screen
 bind -m vi-insert "\C-l":clear-screen
