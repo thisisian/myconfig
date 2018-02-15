@@ -61,4 +61,4 @@ alias git-pull-dotfiles="cd ~/projects/dotfiles && git pull && cd -"
 alias git-push='git add -A && git commit -am. && git push'
 
 # Get private aliases
-[[ -f $HOME/.config/priv_aliases ]] && . $HOME/.config/priv_aliases
+[[ -f $HOME/.config/private_aliases ]] && . $HOME/.config/private_aliases
