@@ -37,7 +37,7 @@ bldin () {
 }
 
 ### aliases ###
-PS1='\e[1m[\u@\h \W]\$\e(B\e[m '
+PS1='[\u@\h \W]\\$ \[$(tput sgr0)\]'
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -A --color=auto'
@@ -61,4 +61,4 @@ alias git-pull-dotfiles="cd ~/projects/dotfiles && git pull && cd -"
 alias git-push='git add -A && git commit -am. && git push'
 
 # Get private aliases
-[[ -f $HOME/.config/private_aliases ]] && . $HOME/.config/private_aliases
+[[ -f $HOME/.config/private-aliases ]] && . $HOME/.config/private-aliases
