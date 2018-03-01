@@ -37,7 +37,7 @@ bldin () {
 }
 
 ### aliases ###
-PS1='[\u@\h \W]\\$ \[$(tput sgr0)\]'
+PS1='\[$(tput bold)\][\u@\h \W]\\$ \[$(tput sgr0)\]'
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -A --color=auto'
