@@ -2,7 +2,7 @@ set nocompatible
 filetype plugin indent on
 set number
 set relativenumber
-syntax on
+syntax off
 set wildmode=longest,list,full
 set wildmenu
 colorscheme default
