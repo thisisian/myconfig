@@ -41,3 +41,7 @@ fi
 ln -sf ${BASEDIR}/.vimrc ~/.vimrc
 mkdir -p ~/.vim/autoload
 ln -sf ${BASEDIR}/.vim/autoload/pathogen.vim ~/.vim/autoload
+
+# ssh-agent
+mkdir -p ~/.ssh
+ln -sf ${BASEDIR}/.ssh/config ~/.ssh/config

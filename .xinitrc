@@ -5,4 +5,5 @@ while true; do
 done &
 exec xsetroot -solid Gray20 &
 feh --randomize --recursive --bg-fill ~/docs/bg &
+eval $(ssh-agent) &
 exec dwm
