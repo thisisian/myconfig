@@ -1,5 +1,6 @@
 set nocompatible
 filetype plugin indent on
+set autoindent
 set number
 set relativenumber
 syntax off
@@ -46,9 +47,7 @@ endfunction
 command! Testing call Test()
 
 """ C/C++ specific
-autocmd FileType c setlocal syntax=OFF
 autocmd FileType c set colorcolumn=80
-autocmd FileType cpp setlocal syntax=OFF
 autocmd FileType cpp set colorcolumn=80
 
 """ LATEX Specific
@@ -58,3 +57,9 @@ autocmd FileType tex nnoremap <leader>b a\textbf{}<ESC>i
 autocmd FileType tex nnoremap <leader>en a\begin{enumerate}<ESC>o\end{enumerate}<ESC>O\item 
 autocmd FileType tex nnoremap <leader>i a\begin{itemize}<ESC>o\end{itemize}<ESC>O\item 
 
+""" Go Specific
+
+autocmd FileType go set colorcolumn=80
+autocmd FileType go set noexpandtab
+autocmd FileType go set softtabstop=0
+autocmd FileType go set shiftwidth=8
