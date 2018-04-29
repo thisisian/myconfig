@@ -19,7 +19,6 @@ set expandtab
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 map Y y$
 
-command W :w
 nmap <C-h> :set hlsearch!<CR>
 
 """ Remaps
@@ -39,12 +38,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-""" Functions
-function! Test()
-   call append(line('.'),"test!")
-endfunction
-command! Testing call Test()
-
 """ C/C++ specific
 autocmd FileType c setlocal syntax=OFF
 autocmd FileType c set colorcolumn=80
@@ -55,6 +48,6 @@ autocmd FileType cpp set colorcolumn=80
 let g:tex_flavor='latex'
 autocmd FileType tex nnoremap <leader>i a\textit{}<ESC>i
 autocmd FileType tex nnoremap <leader>b a\textbf{}<ESC>i
+autocmd FileType tex nnoremap <leader>t a\texttt{}<ESC>i
 autocmd FileType tex nnoremap <leader>en a\begin{enumerate}<ESC>o\end{enumerate}<ESC>O\item 
 autocmd FileType tex nnoremap <leader>i a\begin{itemize}<ESC>o\end{itemize}<ESC>O\item 
-
