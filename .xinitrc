@@ -1,6 +1,6 @@
 xmodmap ~/.Xmodmap & 
 while true; do
-    xsetroot -name "$(~/.config/myconfig/batt.sh) | $( date +"%F %R" )"
+    xsetroot -name "$(~/.config/myconfig/batt.sh)$( date +"%F %R" )"
     sleep 10s
 done &
 exec xsetroot -solid Gray20 &
