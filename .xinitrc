@@ -4,6 +4,6 @@ while true; do
     sleep 10s
 done &
 exec xsetroot -solid Gray20 &
-feh --randomize --recursive --bg-fill ~/docs/bg &
+feh --randomize --recursive --bg-tile ~/docs/bg &
 eval $(ssh-agent) &
 exec dwm

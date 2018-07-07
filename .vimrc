@@ -1,3 +1,4 @@
+execute pathogen#infect()
 set nocompatible
 filetype plugin indent on
 set autoindent
@@ -53,8 +54,10 @@ autocmd FileType tex nnoremap <leader>en a\begin{enumerate}<ESC>o\end{enumerate}
 autocmd FileType tex nnoremap <leader>i a\begin{itemize}<ESC>o\end{itemize}<ESC>O\item 
 autocmd FileType tex set linebreak
 
-""" Go Specific
+""" Haskell
+autocmd FileType haskell set colorcolumn=80
 
+""" Go Specific
 autocmd FileType go set colorcolumn=80
 autocmd FileType go set noexpandtab
 autocmd FileType go set softtabstop=0
