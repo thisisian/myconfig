@@ -4,7 +4,9 @@
 [[ -f $HOME/.bashrc ]] && . $HOME/.bashrc
 
 #env variables
-EDITOR='vim'
+export EDITOR='vim'
 export LYNX_CFG='~/.config/lynx.cfg'
-PATH=$PATH:$HOME/bin:~/.vim/bundle/vim-live-latex-preview/bin
+export PATH=$PATH:$HOME/bin:~/.vim/bundle/vim-live-latex-preview/bin
 export GOPATH=$HOME/projects/go
+
+export PATH="$HOME/.cargo/bin:$PATH"
