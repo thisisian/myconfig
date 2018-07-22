@@ -1,3 +1,6 @@
 *.swo
 *.swp
 *.un~
+
+// Dont push private-aliases file
+private-aliases

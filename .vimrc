@@ -1,3 +1,4 @@
+execute pathogen#infect()
 set nocompatible
 filetype plugin indent on
 set autoindent
@@ -45,14 +46,18 @@ autocmd FileType cpp set colorcolumn=80
 
 """ LATEX Specific
 let g:tex_flavor='latex'
+
 autocmd FileType tex nnoremap <leader>i a\textit{}<ESC>i
 autocmd FileType tex nnoremap <leader>b a\textbf{}<ESC>i
 autocmd FileType tex nnoremap <leader>t a\texttt{}<ESC>i
 autocmd FileType tex nnoremap <leader>en a\begin{enumerate}<ESC>o\end{enumerate}<ESC>O\item 
 autocmd FileType tex nnoremap <leader>i a\begin{itemize}<ESC>o\end{itemize}<ESC>O\item 
+autocmd FileType tex set linebreak
+
+""" Haskell
+autocmd FileType haskell set colorcolumn=80
 
 """ Go Specific
-
 autocmd FileType go set colorcolumn=80
 autocmd FileType go set noexpandtab
 autocmd FileType go set softtabstop=0

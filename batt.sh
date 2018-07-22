@@ -5,6 +5,8 @@ if OUTPUT="$(acpi -b)" >/dev/null; then
         echo -n "C:"
     elif echo $OUTPUT | grep -o "Discharging" >/dev/null; then
         echo -n "D:"
+    else
+        exit 0
     fi
-    echo $OUTPUT | grep -o '[0-9]*%'
+    echo "$(echo $OUTPUT | grep -o '[0-9]*%') | "
 fi
