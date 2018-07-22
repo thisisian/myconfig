@@ -51,7 +51,7 @@ alias git-push='git add -A && git commit -am. && git push'
 alias cb='xclip -i -se c'
 
 # Get private aliases
-[[ -f $HOME/.config/private-aliases ]] && . $HOME/.config/private-aliases
+[[ -f $HOME/.config/myconfig/private-aliases ]] && . $HOME/.config/myconfig/private-aliases
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/opt/apache-maven-3.5.4/bin:$PATH"
