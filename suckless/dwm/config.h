@@ -58,7 +58,7 @@ static const Layout layouts[] = {
 
 /* application preferences */
 #define TERM "st"
-#define BROWSER "firefox"
+#define BROWSER "chromium"
 #define MAIL "mutt"
 #define IRC "weechat"
 
