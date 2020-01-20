@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "terminus:pixelsize=18:antialias=false:autohint:false";
+static char font[] = "terminus:pixelsize=14:antialias=false:autohint:false";
 static int borderpx = 2;
 #define histsize 2000
  
@@ -181,7 +181,6 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
         { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
         { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
 };
 
 /*
