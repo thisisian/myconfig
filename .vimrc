@@ -1,4 +1,3 @@
-execute pathogen#infect()
 set nocompatible
 filetype plugin indent on
 set autoindent
@@ -9,6 +8,7 @@ set wildmode=longest,list,full
 set wildmenu
 colorscheme default
 set encoding=utf-8
+set visualbell
  
 " Use <F11> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F11>
