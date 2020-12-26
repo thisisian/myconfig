@@ -38,7 +38,7 @@ static const Rule rules[] = { {}
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -73,8 +73,8 @@ static const char *play[] = { "" };
 static const char *next[] = { "" };
 static const char *prev[] = { "" };
 static const char *stop[] = { "" };
-static const char *backlu[] = { "xbacklight", "-steps", "1", "-time", "0", "-inc", "5%", NULL };
-static const char *backld[] = { "xbacklight", "-steps", "1", "-time", "0", "-dec", "5%", NULL };
+static const char *backlu[] = { "brightnessctl", "set", "5%+", NULL };
+static const char *backld[] = { "brightnessctl", "set", "5%-", NULL };
 static const char *prtscr[] = { "scrot", "~/temp/screenshot.png", NULL};
 
 /* keybinds */
