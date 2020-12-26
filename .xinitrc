@@ -5,5 +5,6 @@ while true; do
 done &
 exec xsetroot -solid Gray20 &
 feh --randomize --recursive --bg-tile ~/docs/bg &
+wmname LG3D &
 eval $(ssh-agent) &
 exec dwm
