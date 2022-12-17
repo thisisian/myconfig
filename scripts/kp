@@ -1,0 +1,38 @@
+#!/bin/sh
+
+PW_FILE=$HOME/passwords.kdbx
+KEEPASS=keepassxc-cli
+DFLT_PW_LEN=15
+
+while getopts ls:c:g:u:l:n: c ;
+do
+    case $c in
+        c) COPY_ARG=$OPTARG ;;
+        s) SHOW_ARG=$OPTARG ;;
+        l) LIST_ARG=TRUE ;;
+        g) GENERATE_ARG=$OPTARG ;;
+        u) USERNAME_ARG=$OPTARG ;;
+        n) LENGTH_ARG=$OPTARG ;;
+        *) ;;
+    esac
+done
+
+if [ -n "$SHOW_ARG" ]; then
+    "$KEEPASS" show -s  "$PW_FILE" "$SHOW_ARG"
+elif [ -n "$COPY_ARG" ]; then
+    "$KEEPASS" clip -b  "$PW_FILE" "$COPY_ARG"
+elif [ -n "$LIST_ARG" ]; then
+    "$KEEPASS" ls "$PW_FILE"
+elif [ -n "$GENERATE_ARG" ]; then
+    PW_LENGTH="$DFLT_PW_LEN"
+    if [ -n "$LENGTH_ARG" ]; then
+        PW_LENGTH="$LENGTH_ARG"
+    fi
+    COMMAND_OPTS="-lUns -L ${PW_LENGTH}"
+    if [ -n "$USERNAME_ARG" ]; then
+        COMMAND_OPTS="$COMMAND_OPTS -u $USERNAME_ARG"
+    fi
+    "$KEEPASS" add "$COMMAND_OPTS" "$PW_FILE" "$GENERATE_ARG"
+else
+    "$KEEPASS" ls "$PW_FILE"
+fi

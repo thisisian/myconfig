@@ -25,8 +25,7 @@ then
 
     # vim
     ln -sf ${BASEDIR}/.vimrc ~/.vimrc
+
+    #scripts
+    ln -sf ${BASEDIR}/scripts/kb ~/.local/bin/kb
 fi
-
-
-
-
