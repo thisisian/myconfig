@@ -1,7 +1,10 @@
-tar -xvf st-0.8.4.tar.gz
-cd st-0.8.4
+#!/bin/sh
+
+VERSION=0.9
+tar -xvf st-${VERSION}.tar.gz
+cd st-${VERSION} || exit
 patch -p1 < ../st-clipboard-0.8.3.diff 
 cp ../config.h .
 sudo make install
 cd ../
-rm -rf st-0.8.4
+rm -rf st-${VERSION}

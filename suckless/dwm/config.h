@@ -36,9 +36,10 @@ static const Rule rules[] = { {}
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const float mfact        = 0.55; /* factor of master area size [0.05..0.95] */
+static const int nmaster        = 1;    /* number of clients in master area */
+static const int resizehints    = 0;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1;    /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -62,7 +63,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_darkblue, "-nf", col_gray4, "-sb", col_gray4, "-sf", col_darkblue, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]  = { "chromium", NULL};
+static const char *browser[]  = { "firefox", NULL};
 static const char *lock[]  = { "slock", NULL };
 
 /* media keys */
