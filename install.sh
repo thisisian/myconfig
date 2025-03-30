@@ -9,23 +9,17 @@ then
     # bash
     ln -sf ${BASEDIR}/.bashrc ~/.bashrc
 
-    # fonts
-    mkdir -p ~/.config/fontconfig
-    ln -sf ${BASEDIR}/.config/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf
-
     # git
     ln -sf ${BASEDIR}/.gitconfig ~/.gitconfig
 
     # tmux
     ln -sf ${BASEDIR}/.tmux.conf ~/.tmux.conf
 
-    # X
-    ln -sf ${BASEDIR}/.xinitrc ~/.xinitrc
-    ln -sf ${BASEDIR}/.Xmodmap ~/.Xmodmap
-
     # vim
     ln -sf ${BASEDIR}/.vimrc ~/.vimrc
 
     #scripts
-    ln -sf ${BASEDIR}/scripts/kb ~/.local/bin/kb
+    ln -sf ${BASEDIR}/scripts/startw ~/.local/bin/startw
+
+    echo "export PATH=$PATH:$HOME/.local/bin" >> $HOME/.bash_profile
 fi
