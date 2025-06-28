@@ -1,2 +1,3 @@
 #!/bin/bash
-dwl -s "somebar-status.sh & somebar"
+somebar-status.sh &
+dwl -s somebar

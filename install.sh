@@ -20,6 +20,7 @@ then
 
     #scripts
     ln -sf ${BASEDIR}/scripts/startw ~/.local/bin/startw
+    ln -sf ${BASEDIR}/scripts/somebar-status.sh ~/.local/bin/somebar-status.sh
 
     echo "export PATH=$PATH:$HOME/.local/bin" >> $HOME/.bash_profile
 fi
