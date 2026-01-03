@@ -3,10 +3,8 @@ filetype plugin indent on
 set autoindent
 set number
 set relativenumber
-syntax off
 set wildmode=longest,list,full
 set wildmenu
-colorscheme default
 set encoding=utf-8
 set visualbell
  
@@ -40,10 +38,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-""" C/C++ specific
-autocmd FileType c set colorcolumn=80
-autocmd FileType cpp set colorcolumn=80
-
 """ LATEX Specific
 let g:tex_flavor='latex'
 
@@ -53,12 +47,3 @@ autocmd FileType tex nnoremap <leader>t a\texttt{}<ESC>i
 autocmd FileType tex nnoremap <leader>en a\begin{enumerate}<ESC>o\end{enumerate}<ESC>O\item 
 autocmd FileType tex nnoremap <leader>i a\begin{itemize}<ESC>o\end{itemize}<ESC>O\item 
 autocmd FileType tex set linebreak
-
-""" Haskell
-autocmd FileType haskell set colorcolumn=80
-
-""" Go Specific
-autocmd FileType go set colorcolumn=80
-autocmd FileType go set noexpandtab
-autocmd FileType go set softtabstop=0
-autocmd FileType go set shiftwidth=8
