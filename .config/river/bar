@@ -8,5 +8,3 @@ while cat "$FIFO"; do :; done | sandbar \
 	-font "mono:size=17" \
         -no-layout \
         -hide-normal-mode \
-
-

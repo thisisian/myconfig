@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env sh
 
 status() {
 
@@ -23,6 +23,6 @@ FIFO="$XDG_RUNTIME_DIR/sandbar"
 
 for (( ; ; ))
 do
+	echo "all status $(status)" > $FIFO
 	sleep 5
-	echo "$(status)"
 done
