@@ -11,8 +11,8 @@ riverctl map normal Super D spawn 'fuzzel'
 # Super+Shift+F to launch firefox
 riverctl map normal Shift+Super F spawn 'firefox'
 
-# Super+Shift+L to lock
-riverctl map normal Shift+Super L spawn "waylock"
+# Control+Shift+L to lock
+riverctl map normal Control+Shift L spawn 'waylock'
 
 # Super+. to launch emojis
 riverctl map normal Super E spawn 'bemoji -t'
