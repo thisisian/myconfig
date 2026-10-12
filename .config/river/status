@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/env sh
+
 status() {
 
 	if ACPI_OUTPUT="$(acpi -b)" 2>/dev/null; then
@@ -16,9 +17,12 @@ status() {
 
 sleep 2
 
+printf "%s" "$$" > "$XDG_RUNTIME_DIR/status_pid" 
+FIFO="$XDG_RUNTIME_DIR/sandbar" 
+[ -e "$FIFO" ] || mkfifo "$FIFO" 
+
 for (( ; ; ))
 do
-	somebar -c status "$(status)"
+	echo "all status $(status)" > $FIFO
 	sleep 5
 done
-
